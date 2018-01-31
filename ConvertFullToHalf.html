@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
     <head>
         <meta charset="utf-8">
@@ -18,9 +18,12 @@ $(document).ready(function() {
     	});
 
 	String.prototype.toHalfWidth = function () {
+		return this.replace(/[０-￥＇，！．]/g, function (s) { return String.fromCharCode(s.charCodeAt(0) - 0xFEE0) });
     	};
 
 });
 </script>
+	    Try Typing Something In Full Width Text:( Ｉ＇ｍ ｆｕｌｌ ｗｉｄｔｈ， ｙｏ！)
+	    <input type="textbox">
     </body>
 </html>
